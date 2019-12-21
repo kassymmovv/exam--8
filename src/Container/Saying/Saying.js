@@ -16,9 +16,7 @@ class Saying extends Component {
 
     render() {
         const a = this.state.quote;
-        console.log(a);
         const q = [];
-        console.log(this.state.quote);
         for (let key in a){
             key ={
                 author: a[key].author,

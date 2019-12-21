@@ -12,18 +12,7 @@ class StarWars extends Component {
            this.setState({quote: response.data})
        }
     }
-    delete =  () => {
-        const quotes = [...this.state.quote];
-         quotes.map((quo,id) => {
-            axios.delete(`https://ayan-quotes.firebaseio.com/post/${id}.json`);
-            quotes.splice(quo[id],1)
-        });
-        this.setState({quotes});
-
-        console.log(this.state.quotes);
-    };
     render() {
-        console.log(this.state.quote);
       const a = this.state.quote;
 
         const q = [];
@@ -49,7 +38,6 @@ class StarWars extends Component {
                                 <p>Categories:{quote.category}</p>
                                 <p>text:{quote.text}</p>
                                 <NavLink to={`/${quote.id}`}>edit</NavLink>
-                                <button onClick={ this.delete}>delete</button>
                             </div>
                         )
                     }

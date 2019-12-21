@@ -29,12 +29,11 @@ class Home extends Component {
         });
         this.setState({quotes});
 
-        console.log(this.state.quotes);
     };
 
 
     render() {
-        console.log(this.state.quotes);
+
 
         return (
             <div>
